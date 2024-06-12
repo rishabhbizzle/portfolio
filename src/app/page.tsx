@@ -8,6 +8,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import RecentPlayedTracks from "@/components/recentPlayedTracks";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -16,8 +17,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4">
+    <main className="relative mx-auto w-full scroll-my-12 overflow-auto p-4 print:p-12 md:p-16 dark:bg-gray-950">
+      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6 dark:bg-gray-950">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -138,28 +139,7 @@ export default function Page() {
             );
           })}
         </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Education</h2>
-          {RESUME_DATA.education.map((education) => {
-            return (
-              <Card key={education.school}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
-                      {education.school}
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="mt-2 print:text-[12px]">
-                  {education.degree}
-                </CardContent>
-              </Card>
-            );
-          })}
-        </Section>
+       
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
@@ -189,14 +169,38 @@ export default function Page() {
             })}
           </div>
         </Section>
+        {/* <Section>
+          <h2 className="text-xl font-bold">Education</h2>
+          {RESUME_DATA.education.map((education) => {
+            return (
+              <Card key={education.school}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="font-semibold leading-none">
+                      {education.school}
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {education.start} - {education.end}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="mt-2 print:text-[12px]">
+                  {education.degree}
+                </CardContent>
+              </Card>
+            );
+          })}
+        </Section> */}
+
+        {/* others section */}
+
+      {RESUME_DATA?.lastFm?.username && RESUME_DATA?.lastFm?.key && (
+          <RecentPlayedTracks userName={RESUME_DATA?.lastFm?.username} api_key={RESUME_DATA.lastFm.key} />
+      )}
       </section>
 
       <CommandMenu
         links={[
-          {
-            url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website",
-          },
           ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
             url: socialMediaLink.url,
             title: socialMediaLink.name,
