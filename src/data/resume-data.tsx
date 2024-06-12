@@ -18,6 +18,7 @@ import {
   YearProgressLogo,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { File, FileText } from "lucide-react";
 
 export const RESUME_DATA = {
   name: "Rishabh Jain",
@@ -25,10 +26,10 @@ export const RESUME_DATA = {
   location: "Delhi, India",
   locationLink: "https://www.google.com/maps/place/Delhi,+India",
   about:
-    "Detail-oriented Full Stack Engineer dedicated to building high-quality products.",
+    "Detail-oriented Software Developer dedicated to building high-quality products.",
   summary:
-    "As a Full Stack Engineer, I specialize in taking products from concept to launch. I excel in leading teams and creating environments where individuals perform at their best. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience working remotely with companies worldwide.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/100997409?v=4",
+    "As a Full Stack Engineer, I specialize in taking products from concept to launch. Currently, I work mostly with JavaScript/TypeScript, React, Node.js, and PostgreSQL. I have over 1.5 years of experience working remotely. My dream company is Spotify. In freetime I play guitar and listen to music a lot xD",
+  avatarUrl: "https://media.licdn.com/dms/image/D5603AQG-EqMvOfoO6A/profile-displayphoto-shrink_800_800/0/1707162100596?e=1723680000&v=beta&t=ecEJn4LNbb2AXoU0MPJZx5W0SNIaFys6wnLPq2CpZfk",
   // personalWebsiteUrl: "https://jarocki.me",
   contact: {
     email: "rishabhbizzle@gmail.com",
@@ -49,6 +50,11 @@ export const RESUME_DATA = {
         url: "https://x.com/rishabhtwt",
         icon: XIcon,
       },
+      {
+        name: 'Resume',
+        url: '/resume.pdf',
+        icon: FileText
+      }
     ],
   },
   education: [
@@ -77,8 +83,8 @@ export const RESUME_DATA = {
       badges: ["Remote"],
       title: "Full Stack Developer",
       logo: ParabolLogo,
-      start: "Sept 2021",
-      end: "Nov 2024",
+      start: "Sept 2022",
+      end: "Nov 2022",
       description:
         "Worked on an ed-tech platform to help disabled people using React.js, Django, SQL. Developed a web application that provides a platform for disabled people to learn annd grow.",
     },
@@ -86,9 +92,9 @@ export const RESUME_DATA = {
       company: "Freelancing",
       // link: "https://clevertech.biz",
       badges: ["Remote"],
-      title: "Full Stack Developer",
+      title: "Web Developer",
       logo: ClevertechLogo,
-      start: "2021",
+      start: "Jan 2022",
       end: null,
       description:
       "Worked on various projects for different clients as a full stack developer"
@@ -193,4 +199,8 @@ export const RESUME_DATA = {
     //   },
     // },
   ],
+  lastFm : {
+    username: "bizzxle",
+    key: "32d3eb6b6ee9e8faa643858c983bfadf",
+  }
 } as const;
