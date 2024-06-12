@@ -34,7 +34,7 @@ function RecentPlayedTracks({ userName, api_key }: Props) {
         <ul className="divide-y divide-gray-800">
           {tracks?.length > 0 &&
             tracks.map((track, index) => (
-              <li className="hover:bg-gray-850 grid grid-cols-[40px_2fr_1fr] items-center gap-4 px-3 py-2 transition-colors">
+              <li key={index} className="hover:bg-gray-850 grid grid-cols-[40px_2fr_1fr] items-center gap-4 px-3 py-2 transition-colors">
                 <img
                   src={track?.image[2]["#text"]}
                   alt="Album Art"

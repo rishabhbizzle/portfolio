@@ -90,7 +90,7 @@ export const RESUME_DATA = {
     },
     {
       company: "Freelancing",
-      // link: "https://clevertech.biz",
+      link: "",
       badges: ["Remote"],
       title: "Web Developer",
       logo: ClevertechLogo,
