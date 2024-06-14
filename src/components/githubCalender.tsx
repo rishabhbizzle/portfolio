@@ -29,7 +29,7 @@ const selectLastHalfYear = (contributions: any) => {
 function GithubCalender() {
   const { theme, setTheme } = useTheme();
   return (
-    <ScrollArea className="w-full whitespace-nowrap rounded-md border">
+    <ScrollArea className="w-full whitespace-nowrap">
       <GitHubCalendar
         username="rishabhbizzle"
         // theme={{
