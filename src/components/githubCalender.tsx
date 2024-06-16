@@ -32,10 +32,6 @@ function GithubCalender() {
     <ScrollArea className="w-full whitespace-nowrap">
       <GitHubCalendar
         username="rishabhbizzle"
-        // theme={{
-        //     light: ['hsl(0, 0%, 92%)', 'firebrick'],
-        //     dark: ['#333', 'rgb(214, 16, 174)'],
-        //   }}
         year={new Date().getFullYear()}
         hideColorLegend
         labels={{
