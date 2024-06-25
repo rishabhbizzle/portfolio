@@ -110,6 +110,9 @@ export const RESUME_DATA = {
     "PostgreSQL",
     "Python",
     "Tailwind CSS",
+    "AWS",
+    "Material UI",
+    "Redis",
   ],
   projects: [
     {
