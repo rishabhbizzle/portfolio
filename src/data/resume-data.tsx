@@ -59,6 +59,12 @@ export const RESUME_DATA = {
   },
   education: [
     {
+      school: "Indira Gandhi National University (IGNOU)",
+      degree: "Master's Degree in Computer Applications (MCA)",
+      start: "2024",
+      end: "2026",
+    },
+    {
       school: "University Of Delhi",
       degree: "Bachelor's Degree in Commerce (Hons.)",
       start: "2020",
