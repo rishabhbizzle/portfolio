@@ -132,7 +132,7 @@ export const RESUME_DATA = {
         'Redis'
       ],
       description:
-        "An innovative Spotify streaming analytics platform used by 5000+ users and has accumulated over 50,000 views.",
+        "An innovative Spotify streaming analytics platform used by 5500+ users and has accumulated over 60,000 views.",
       logo: ParabolLogo,
       link: {
         label: "github.com",
